@@ -10,6 +10,9 @@
 
     <input asp-for="Concluida" hidden />    
 
+    <input asp-for="UsuarioId" value="@ViewBag.UsuarioId" hidden />
+
+
     <div class="col-12">
         <div class="form-group">
             <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>

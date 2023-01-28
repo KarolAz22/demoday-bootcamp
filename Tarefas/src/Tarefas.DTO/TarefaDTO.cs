@@ -11,5 +11,6 @@ namespace Tarefas.DTO
         public string? Descricao { get; set; }  
 
         public bool Concluida { get; set; }
+        public int UsuarioId {get ; set; }
     }
 }

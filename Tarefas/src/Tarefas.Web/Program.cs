@@ -4,6 +4,9 @@ using Tarefas.Web.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 var config = new AutoMapper.MapperConfiguration(c => {
@@ -27,6 +30,9 @@ builder.Services.AddTransient<IUsuarioDAO, UsuarioDAO>();
 // Autenticação
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(x => x.LoginPath = "/Login");
+
+builder.Services.AddHttpContextAccessor();
+
 
 var app = builder.Build();
 
